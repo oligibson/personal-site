@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row align-items-center text-center">
+        <div class="col-8 mx-auto">
+            <header class="mb-5">
+                <h1 class="text-uppercase header">{{.Title }}</h1>
+            </header>
+        </div>
+    </div>
+    <div class="row mb-4 mb-md-5">
+        <div class="col card-deck-wrapper">
+            <div class="card-deck">
+            {{ $posts := where $.Site.RegularPages "Type" "posts" }}
+            {{ range (last 3 $posts.ByDate).Reverse }}
+                <a class="card" href="{{ .Params.link }}" target="_blank" onclick="mixpanel.track('Blog: Read - {{ .Title }}');">
+                    <div class="card-img-top" style="background-image: url('{{ .Params.image }}');"></div>
+                    <div class="card-body">
+                        <h4 class="card-title">{{ .Title }}</h4>
+                        <p class="card-text">{{ .Params.summary }}</p>
+                    </div>
+                </a>
+            {{ end }}
+            </div>
+        </div>
+    </div>
+    {{ if .Params.button }}
+    <div class="row">
+        <a class="btn btn-outline-primary btn-lg mx-auto" href="{{ .Params.buttonlink }}" role="button" target="_blank" onclick="mixpanel.track('Blog: Read More');">{{.Params.buttontext }}</a>
+    </div>
+    {{ end }}
+</div>

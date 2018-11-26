@@ -1,0 +1,5 @@
+.idea
+vendor/
+resources/
+public/
+/node_modules

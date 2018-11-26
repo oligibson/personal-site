@@ -1,0 +1,9 @@
+baseURL = "https://oligibson.com/"
+languageCode = "en-us"
+title = "Oli Gibson"
+
+[params]
+  author = "Oli Gibson"
+  tagline = "Product Manger, Consultant, Speaker"
+  description = "I'm a Product Manager and Consultant based in London. I work with companies, across all sectors, helping them build better products using lean and agile methods as well as making changes to organisational culture and ways of working."
+  twitter = "oligibson"

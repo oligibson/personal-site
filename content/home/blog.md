@@ -6,6 +6,5 @@ weight: 3
 widget: "blog"
 button: true
 buttontext: "Read more"
-buttonlink: "https://medium.com/@oligibson"
+buttonlink: "https://blog.oligibson.com"
 ---
-

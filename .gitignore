@@ -2,3 +2,4 @@
 vendor/
 resources/
 /node_modules
+static/.DS_store
